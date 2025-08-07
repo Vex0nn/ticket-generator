@@ -1,0 +1,361 @@
+@font-face {
+    font-family: Font;
+    src: url(assets/fonts/Inconsolata-VariableFont_wdth\,wght.ttf);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Font;
+}
+
+body, html {
+    overflow-x: hidden;
+    outline: 5px solid red;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+}
+
+.pattern-lines {
+    position: absolute;
+    top: 0;
+}
+
+h1, p, label {
+    font-family: Font;
+}
+
+h1 {
+    color: white;
+    text-align: center;
+    margin-top: 40px;
+}
+
+p {
+    text-align: center;
+    color: hsl(252, 6%, 83%);
+    font-size: clamp(1em, 4vw, 1.2em);
+}
+
+.title {
+    font-size: clamp(2em, 4vw, 3em);
+}
+
+main {
+    position: relative;
+    display: flex;
+    overflow-x: hidden;
+    overflow-y: visible;
+    justify-content: center;
+    padding: 30px;
+    width: 100vw;
+    min-height: 100vh;
+    background: url(assets/images/background-desktop.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    contain: layout;
+}
+
+.desc2 {
+    margin-top: 20px;
+    margin-bottom: 100px;
+}
+
+.content {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+    width: 50%;
+}
+
+.infoImage {
+    border-radius: 10px;
+    aspect-ratio: 1 / 1;
+    width: clamp(40px, 12vw, 80px) !important;
+}
+
+.contentSuccess {
+    display: none;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+    width: 50%;
+}
+
+.container {
+    position: relative;
+}
+
+.design {
+    position: absolute;
+    pointer-events: none;
+    max-height: 100vh;
+    overflow: hidden;
+}
+
+picture {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: 1;
+}
+
+picture img {
+    width: 60vw;
+}
+
+.circle {
+    position: absolute;
+    bottom: 0;
+    z-index: 0;
+    transform: translateX(130%);
+    pointer-events: none;
+}
+
+#form {
+    position: relative;
+}
+
+.line-top {
+    right: 0;
+    top: 80px;
+    width: 30%;
+    z-index: 1;
+}
+
+input[type ='file'] {
+    cursor: pointer;
+    overflow: hidden;
+    position: absolute;
+    top: 27px;
+    height: 115px;
+    width: 380px;
+    opacity: 0;
+    pointer-events: auto;
+}
+
+.updateLabel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    color: hsl(252, 6%, 83%);
+    border: 1px dashed hsl(245, 15%, 58%);
+    border-radius: 10px;
+    padding: 18px 60px;
+    background-color: hsla(246, 15%, 58%, 0.103);
+    margin-top: 10px;
+    text-align: center;
+}
+
+.updateLabel img {
+    background-color: hsla(245, 19%, 35%, 0.562);
+    border: 1px solid hsl(245, 19%, 35%);
+    padding: 7px;
+    border-radius: 10px;
+}
+
+.updateLabel:hover {
+    cursor: pointer;
+}
+
+.labels {
+    color: white;
+}
+
+.info {
+    margin-top: 15px;
+    margin-bottom: 5px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: hsl(252, 6%, 83%);
+    font-size: 0.8em;
+}
+
+.inputBoxes {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    gap: 10px;
+    position: relative;
+}
+
+.inputs {
+    height: 45px;
+    border-radius: 10px;
+    background-color: hsla(246, 15%, 58%, 0.103);
+    border: 1px solid hsl(245, 15%, 58%);
+    color: white;
+    padding-left: 10px;
+}
+
+.inputs:focus {
+    outline: 1px solid hsl(245, 9%, 48%);
+}
+
+.btn {
+    height: 45px;
+    border-radius: 10px;
+    font-weight: 700;
+    font-size: 1.1em;
+    background-color: hsl(7, 71%, 60%);
+    border: 1px solid hsl(7, 88%, 67%);
+    transition: 0.2s all ease-in-out;
+}
+
+.redInfo {
+    display: none;
+    align-items: center;
+    gap: 10px;
+    color: red;
+    font-size: 0.8em;
+}
+
+.btn:hover {
+    cursor: pointer;
+    background-color: hsl(7, 53%, 51%);
+}
+
+.imageContainer {
+    display: flex;
+    position: relative;
+}
+
+.imageContainer > img:nth-child(1) {
+    width: 100%;
+}
+
+.logoTicket {
+    position: absolute;
+    width: 50%;
+    top: 12%;
+    left: 6%;
+}
+
+.date {
+    position: absolute;
+    top: 30%;
+    left: 17%;
+    font-size: clamp(0.6rem, 2vw, 1rem);
+}
+
+.infoContainer {
+    display: grid;
+    position: absolute;
+    align-items: center;
+    grid-template-columns: auto 1fr;
+    bottom: 12%;
+    left: 6%;
+    gap: 15px;
+}
+
+.infoContainer > img {
+    width: clamp(25px, 5vw, 60px);
+}
+
+.texts p {
+    text-align: start;
+}
+
+.texts {
+    justify-self: start;
+}
+
+.texts p {
+    color: white;
+}
+
+.email {
+    color: hsl(7, 71%, 60%);
+}
+
+.name {
+    background: linear-gradient(to right, hsl(7, 86%, 67%), hsl(0, 0%, 100%));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+}
+
+.nameTicket {
+    font-size: clamp(0.7rem, 3vw, 2rem);
+}
+
+.githubTicket {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: clamp(0.4rem, 3vw, 1rem);
+}
+
+.githubTicket img {
+    width: clamp(0.7rem, 3vw, 1.2rem);
+}
+
+.code {
+    position: absolute;
+    right: 1%;
+    bottom: 45%;
+    transform: rotate(90deg);
+    font-size: clamp(0.5rem, 3vw, 2rem);
+}
+
+@media only screen and (max-width: 768px) {
+    main {
+        background: url(assets/images/background-tablet.png);
+    }
+    .content {
+        width: 80%;
+    }
+    .circle {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 375px) {
+    body {
+        background: url(assets/images/background-mobile.png);
+        background-repeat: no-repeat;
+        background-size: auto;
+    }
+    .content {
+        width: 100%;
+    }
+    .contentSuccess {
+        width: 100%;
+    }
+    .circle {
+        transform: translateX(80%);
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    .ticketPattern {
+        width: 100%;
+    }
+    .contentSuccess {
+        width: 80%;
+    }
+    .code {
+        right: 2%;
+    }
+}
+
+@media only screen and (max-width: 881px) {
+    .code {
+        right: 3%;
+    }
+}
+
+@media only screen and (max-width: 550px) {
+    .contentSuccess {
+        width: 100%;
+    }
+}
